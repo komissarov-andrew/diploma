@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Precious metals quotes</title>
+    <link rel="stylesheet" href="../src/scss/app.scss" />
+  </head>
+  <body>
+    <noscript>
+      <strong
+        >We're sorry but this application doesn't work properly without
+        JavaScript enabled. Please enable it to continue.
+      </strong>
+    </noscript>
+    <div id="app"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <script type="text/javascript">
+      function updatedb() {if (confirm("Do you really want update database?"))
+        { fetch('http://localhost:5000/update')
+          .then((response) => {
+          return response.json();
+          })
+         .then((data) => {
+          obj = data;
+        });
+        
+        window.close()} }
+    </script>
+    
+    <input name=message type=submit value="Update database" onClick="updatedb()">
+        
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+        th{ 
+            color:#fff;
+                }
+    </style>
+
+
+    <table class="table table-striped">
+        <tr  class="bg-info">
+            <th>Date</th>
+            <th>Code</th>
+            <th>Name</th>
+            <th>Buy</th>
+            <th>Sell</th>
+        </tr>
+
+        <tbody id="myTable">
+        
+        </tbody>
+    </table>
+
+    <script src="../Getdb.js"></script>
+
+  </body>
+</html>

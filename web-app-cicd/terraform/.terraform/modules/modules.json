@@ -1,0 +1,1 @@
+{"Modules":[{"Key":"eks.node_groups","Source":"./modules/node_groups","Dir":".terraform/modules/eks/modules/node_groups"},{"Key":"","Source":"","Dir":"."},{"Key":"eks","Source":"git::https://github.com/terraform-aws-modules/terraform-aws-eks.git?ref=v12.1.0","Dir":".terraform/modules/eks"}]}
